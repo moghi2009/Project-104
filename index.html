@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Face Recognition App</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <center>
+            <h2 class="btn btn-danger btn-lg heading">Face Recognition App</h3>
+                <br><br>
+
+                <h3>The model is trained for following objects: </h4>
+                    <br>
+                    <hr>
+                    <h4 class="btn btn-primary btn-block">Father</h4>
+                    <hr>
+                    <h4 class="btn btn-primary btn-block">Mother</h4>
+                    <hr>
+                    <h4 class="btn btn-primary btn-block">Sister</h4>
+                    <hr>
+                    <h4 class="btn btn-primary btn-block">Brother</h4>
+                    <hr>
+                    <br><br>
+
+                    <label>Webcam View - </label>
+                    <div id="camera"></div>
+
+                    <br><br>
+                    <div id="result"></div>
+                    <br><br>
+                    <button class="btn btn-success btns" onclick="capture()">Capture Image</button>
+                    <br><br>
+                    <button class="btn  btn-success" onclick="identify()">Identify Image</button>
+                    <br><br>
+                    <p style="font-size: 22px;">Object :<span id="p-object"> </span> </p>
+                    <p style="font-size: 22px;">Accuracy :<span id="p-accuracy"> </span> </p>
+        </center>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
